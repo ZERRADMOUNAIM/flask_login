@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations de Connexion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 50%;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Informations de Connexion Stockées</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Mot de passe</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for info in login_data %}
+            <tr>
+                <td>{{ info.email }}</td>
+                <td>{{ info.password }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
