@@ -20,7 +20,7 @@ def store_info():
         # Enregistrer les informations dans le fichier infos.txt
         with open(INFO_FILE, 'a') as file:
             file.write(f"{email},{password}\n")
-        return redirect(url_for('informations'))
+        return redirect(url_for('index'))
     return 'Veuillez remplir tous les champs', 400
 
 # Route pour afficher les informations stockées
